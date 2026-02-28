@@ -1,0 +1,91 @@
+---
+import ArticlePageLayout from '../../layouts/ArticlePageLayout.astro';
+
+const faqItems = [
+  {
+    question: '¿La escala 6x1 ya fue abolida en Brasil?',
+    answer:
+      'No. Hasta el 28 de febrero de 2026 no hay abolición definitiva aprobada en todas las etapas legislativas.',
+  },
+  {
+    question: '¿Cuál es el límite semanal típico en la 6x1?',
+    answer: 'La referencia general es 44 horas semanales, observando reglas constitucionales y de la CLT.',
+  },
+  {
+    question: '¿Se pueden trabajar domingos en este modelo?',
+    answer:
+      'Sí, en actividades autorizadas, siempre que se respete descanso semanal remunerado y compensaciones de ley.',
+  },
+  {
+    question: '¿Cómo sé si tengo horas extras pendientes?',
+    answer:
+      'Comparando registro real de punto con la nómina y aplicando los adicionales correspondientes de 50% o 100%.',
+  },
+  {
+    question: '¿Qué hago si la empresa no respeta el descanso?',
+    answer:
+      'Debes documentar fechas y turnos, solicitar regularización por escrito y, de ser necesario, buscar apoyo sindical o jurídico.',
+  },
+  {
+    question: '¿La reducción de jornada implica bajar salario?',
+    answer:
+      'Las propuestas públicas suelen discutir reducción de horas sin reducción salarial, pero el texto final depende del trámite legislativo.',
+  },
+];
+
+const toc = [
+  { id: 'faq-lista', label: 'Preguntas frecuentes' },
+  { id: 'preguntas-clave', label: 'Preguntas clave para RRHH' },
+  { id: 'siguientes-pasos', label: 'Siguientes pasos' },
+];
+---
+
+<ArticlePageLayout
+  title="FAQ de la Escala 6x1: Respuestas Claras | Escala6x1.net"
+  heading="FAQ de la Escala 6x1"
+  description="Respuestas directas sobre jornada 6x1, derechos laborales, horas extras, domingos, descanso y debate legislativo en Brasil."
+  canonicalPath="/faq-escala-6x1/"
+  readTime="9 min"
+  toc={toc}
+  faqItems={faqItems}
+>
+  <p>
+    Esta página concentra respuestas rápidas para las dudas más repetidas sobre la escala 6x1. Si necesitas
+    explicación extensa, al final de cada bloque encontrarás enlaces a guías completas.
+  </p>
+
+  <h2 id="faq-lista" class="font-display text-2xl text-white mt-10">Preguntas frecuentes</h2>
+  <div class="space-y-3">
+    {faqItems.map((item) => (
+      <details class="group bg-ink-900/50 border border-ink-700/50 rounded-xl overflow-hidden">
+        <summary class="flex items-center justify-between p-5 cursor-pointer list-none">
+          <h3 class="text-white font-medium pr-4">{item.question}</h3>
+          <svg class="w-5 h-5 text-ink-400 group-open:rotate-180 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+        </summary>
+        <div class="px-5 pb-5 text-ink-300 leading-relaxed">{item.answer}</div>
+      </details>
+    ))}
+  </div>
+
+  <h2 id="preguntas-clave" class="font-display text-2xl text-white mt-10">Preguntas clave para RRHH o gestor</h2>
+  <ul class="list-disc pl-6 space-y-2">
+    <li>¿Cómo se controla la jornada real y no solo la escala teórica?</li>
+    <li>¿Cuál es el criterio de compensación de domingos y feriados?</li>
+    <li>¿Qué acuerdo de banco de horas está vigente y por cuánto plazo?</li>
+    <li>¿Cómo se auditan diferencias entre punto y nómina mes a mes?</li>
+  </ul>
+  <p>
+    Estas preguntas evitan conversaciones genéricas y ayudan a resolver con evidencia, fechas y cifras.
+  </p>
+
+  <h2 id="siguientes-pasos" class="font-display text-2xl text-white mt-10">Siguientes pasos recomendados</h2>
+  <p>
+    Si recién empiezas con el tema, continúa por este orden:
+  </p>
+  <ol class="list-decimal pl-6 space-y-2">
+    <li><a href="/guia-escala-6x1/" class="text-brand-400 hover:text-brand-300">Guía completa de la escala 6x1</a></li>
+    <li><a href="/derechos-laborales-escala-6x1/" class="text-brand-400 hover:text-brand-300">Derechos laborales del trabajador</a></li>
+    <li><a href="/calculadora-horas-extras-6x1/" class="text-brand-400 hover:text-brand-300">Calculadora de horas extras</a></li>
+    <li><a href="/fin-escala-6x1-reforma-laboral/" class="text-brand-400 hover:text-brand-300">Escenarios de reforma y transición</a></li>
+  </ol>
+</ArticlePageLayout>

@@ -1,0 +1,119 @@
+---
+import ArticlePageLayout from '../../layouts/ArticlePageLayout.astro';
+
+const toc = [
+  { id: 'derechos-minimos', label: 'Derechos mínimos' },
+  { id: 'horas-extras', label: 'Horas extras y banco de horas' },
+  { id: 'domingos', label: 'Domingos y feriados' },
+  { id: 'documentacion', label: 'Cómo documentar incumplimientos' },
+  { id: 'acciones', label: 'Plan de acción práctico' },
+];
+---
+
+<ArticlePageLayout
+  title="Derechos Laborales en la Escala 6x1 | Escala6x1.net"
+  heading="Derechos Laborales del Trabajador en la Escala 6x1"
+  description="Resumen práctico de derechos en la jornada 6x1: límites de horas, descanso semanal, adicional nocturno, banco de horas y cómo reclamar con evidencia."
+  canonicalPath="/derechos-laborales-escala-6x1/"
+  readTime="11 min"
+  toc={toc}
+>
+  <p>
+    Trabajar bajo escala 6x1 no elimina tus derechos. Esta guía concentra los puntos que más generan dudas:
+    cuándo hay hora extra, cómo se calcula el descanso semanal remunerado, qué cambia en domingos/feriados y
+    qué documentos debes guardar para corregir pagos o turnos irregulares.
+  </p>
+
+  <h2 id="derechos-minimos" class="font-display text-2xl text-white mt-10">Derechos mínimos que no se negocian</h2>
+  <ul class="list-disc pl-6 space-y-2">
+    <li>Límite general de jornada semanal conforme Constitución y CLT.</li>
+    <li>Descanso semanal remunerado de al menos 24 horas consecutivas.</li>
+    <li>Intervalo entre jornadas para recuperación física y mental.</li>
+    <li>Intervalo intrajornada para alimentación y descanso.</li>
+    <li>Adicional de horas extras y adicional nocturno cuando corresponda.</li>
+  </ul>
+  <p>
+    En la práctica, el conflicto habitual aparece cuando la empresa cumple la escala formal, pero no cumple el
+    registro real de jornada. La diferencia entre escala publicada y jornada efectivamente trabajada puede
+    generar pasivo laboral.
+  </p>
+
+  <h2 id="horas-extras" class="font-display text-2xl text-white mt-10">Horas extras y banco de horas</h2>
+  <p>
+    Toda hora por encima del límite diario o semanal puede configurar extra, salvo compensación válida en banco
+    de horas dentro del plazo legal y con respaldo documental. Sin control transparente, el banco de horas se
+    convierte en la principal fuente de litigio.
+  </p>
+  <div class="overflow-x-auto rounded-xl border border-ink-700/50">
+    <table class="w-full text-sm">
+      <thead>
+        <tr class="bg-ink-800/80">
+          <th class="text-left px-4 py-3 text-white">Situación</th>
+          <th class="text-left px-4 py-3 text-white">Regla general</th>
+          <th class="text-left px-4 py-3 text-white">Riesgo si no cumple</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="border-t border-ink-800/50">
+          <td class="px-4 py-3">Hora extra en día normal</td>
+          <td class="px-4 py-3">Adicional mínimo de 50%</td>
+          <td class="px-4 py-3">Diferencias salariales + multa</td>
+        </tr>
+        <tr class="border-t border-ink-800/50">
+          <td class="px-4 py-3">Domingo/Feriado sin compensación</td>
+          <td class="px-4 py-3">Pago en condiciones reforzadas</td>
+          <td class="px-4 py-3">Pasivo elevado por acumulación</td>
+        </tr>
+        <tr class="border-t border-ink-800/50">
+          <td class="px-4 py-3">Banco de horas</td>
+          <td class="px-4 py-3">Acuerdo válido + plazo de compensación</td>
+          <td class="px-4 py-3">Invalidación del banco de horas</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    Puedes usar nuestra
+    <a href="/calculadora-horas-extras-6x1/" class="text-brand-400 hover:text-brand-300">calculadora de horas extras 6x1</a>
+    para una estimación inicial antes de hablar con RRHH o sindicato.
+  </p>
+
+  <h2 id="domingos" class="font-display text-2xl text-white mt-10">Domingos y feriados en la 6x1</h2>
+  <p>
+    En algunos sectores, trabajar domingo es permitido, pero el descanso semanal remunerado debe estar
+    garantizado. Cuando no hay compensación correcta, el costo jurídico crece rápido, especialmente en períodos
+    largos sin regularización.
+  </p>
+  <p>
+    Para el trabajador, el punto clave es comprobar continuidad de jornadas sin descanso adecuado. Para la
+    empresa, la prioridad es auditar escalas reales y corregir desvíos antes de que se acumulen meses de
+    diferencias.
+  </p>
+
+  <h2 id="documentacion" class="font-display text-2xl text-white mt-10">Cómo documentar incumplimientos</h2>
+  <ol class="list-decimal pl-6 space-y-2">
+    <li>Guarda escala oficial semanal o mensual.</li>
+    <li>Guarda registros de punto (entrada, salida e intervalos).</li>
+    <li>Compara horas trabajadas vs horas pagadas en nómina.</li>
+    <li>Separa por tipo: extra 50%, domingo, feriado y nocturno.</li>
+    <li>Registra fechas y turnos sin descanso regular.</li>
+  </ol>
+  <p>
+    Este historial permite una conversación objetiva con la empresa y evita discusiones genéricas sin números.
+  </p>
+
+  <h2 id="acciones" class="font-display text-2xl text-white mt-10">Plan de acción práctico</h2>
+  <div class="bg-ink-900/40 rounded-xl border border-ink-800/50 p-5">
+    <ul class="list-disc pl-6 space-y-2">
+      <li>Paso 1: revisar contrato, convenio y política de punto.</li>
+      <li>Paso 2: consolidar 3 meses de datos para cálculo comparativo.</li>
+      <li>Paso 3: solicitar ajuste formal por escrito.</li>
+      <li>Paso 4: si no hay respuesta, escalar con sindicato o asesoría especializada.</li>
+    </ul>
+  </div>
+
+  <p>
+    Si además quieres entender cómo el debate político puede cambiar este escenario, sigue con
+    <a href="/fin-escala-6x1-reforma-laboral/" class="text-brand-400 hover:text-brand-300">nuestro análisis de reforma laboral y fin de la 6x1</a>.
+  </p>
+</ArticlePageLayout>

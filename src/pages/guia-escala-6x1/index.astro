@@ -1,0 +1,181 @@
+---
+import ArticlePageLayout from '../../layouts/ArticlePageLayout.astro';
+
+const toc = [
+  { id: 'definicion', label: 'Qué es la escala 6x1' },
+  { id: 'funcionamiento', label: 'Cómo funciona en la práctica' },
+  { id: 'marco-legal', label: 'Marco legal en Brasil' },
+  { id: 'sectores', label: 'Sectores más afectados' },
+  { id: 'alternativas', label: '6x1 vs 5x2 vs 4x3' },
+  { id: 'que-hacer', label: 'Qué hacer si hay incumplimiento' },
+  { id: 'fuentes', label: 'Fuentes oficiales' },
+];
+
+const faqItems = [
+  {
+    question: '¿La escala 6x1 es ilegal en Brasil?',
+    answer:
+      'No. Hasta el 28 de febrero de 2026, la escala 6x1 sigue siendo legal dentro de los límites constitucionales y de la CLT.',
+  },
+  {
+    question: '¿Cuántas horas semanales permite la 6x1?',
+    answer: 'El límite general es 44 horas semanales, salvo reglas especiales por convenio o categoría profesional.',
+  },
+  {
+    question: '¿Puedo trabajar domingo en la 6x1?',
+    answer:
+      'Sí, en actividades autorizadas, siempre con descanso semanal remunerado y compensaciones legales cuando corresponda.',
+  },
+  {
+    question: '¿Ya se aprobó el fin de la escala 6x1?',
+    answer:
+      'No hay aprobación final. Existen propuestas legislativas en trámite y el debate sigue activo en 2026.',
+  },
+];
+---
+
+<ArticlePageLayout
+  title="Guía Completa de la Escala 6x1 en 2026 | Escala6x1.net"
+  heading="Guía Completa de la Escala 6x1 en Brasil"
+  description="Guía pilar para entender la jornada 6x1: definición, cálculo de horas, derechos laborales, riesgos, reformas y acciones prácticas para trabajadores y empresas."
+  canonicalPath="/guia-escala-6x1/"
+  readTime="14 min"
+  toc={toc}
+  faqItems={faqItems}
+>
+  <p>
+    Esta es la guía central de Escala6x1.net. Aquí reunimos, en un solo documento, los conceptos que más
+    buscan trabajadores, empleadores y periodistas: cómo se organiza la jornada 6x1, qué derechos no se
+    pueden negociar, cuáles son los puntos críticos de cumplimiento y qué cambios legislativos se discuten en
+    2026.
+  </p>
+
+  <h2 id="definicion" class="font-display text-2xl text-white mt-10">Qué es la escala 6x1</h2>
+  <p>
+    La escala 6x1 es un régimen de organización del trabajo donde la persona trabaja seis días consecutivos y
+    descansa un día. En el diseño más común, la carga se distribuye dentro del límite de 44 horas semanales,
+    con turnos diarios que pueden variar según el sector, el convenio colectivo y la necesidad operativa.
+  </p>
+  <p>
+    No es una "ley aislada" con ese nombre literal. Es una forma de aplicación práctica de reglas laborales
+    existentes, especialmente el tope semanal, el descanso semanal remunerado y los intervalos mínimos entre
+    jornadas.
+  </p>
+
+  <h2 id="funcionamiento" class="font-display text-2xl text-white mt-10">Cómo funciona en la práctica</h2>
+  <p>
+    En empresas con operación continua, la 6x1 permite cubrir fines de semana y alta demanda. En términos
+    operativos, suele aparecer en tres formatos:
+  </p>
+  <ul class="list-disc pl-6 space-y-2">
+    <li>Distribución uniforme de horas durante los seis días.</li>
+    <li>Cinco días con jornada más larga y sábado reducido.</li>
+    <li>Turnos rotativos con descanso variable dentro de la semana.</li>
+  </ul>
+  <div class="overflow-x-auto rounded-xl border border-ink-700/50 mt-6">
+    <table class="w-full text-sm">
+      <thead>
+        <tr class="bg-ink-800/80">
+          <th class="text-left px-4 py-3 text-white">Modelo</th>
+          <th class="text-left px-4 py-3 text-white">Ejemplo</th>
+          <th class="text-left px-4 py-3 text-white">Uso frecuente</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="border-t border-ink-800/50">
+          <td class="px-4 py-3">Uniforme</td>
+          <td class="px-4 py-3">7h20 por día</td>
+          <td class="px-4 py-3">Comercio minorista</td>
+        </tr>
+        <tr class="border-t border-ink-800/50">
+          <td class="px-4 py-3">Mixto</td>
+          <td class="px-4 py-3">8h lun-vie + 4h sáb</td>
+          <td class="px-4 py-3">Industria y logística</td>
+        </tr>
+        <tr class="border-t border-ink-800/50">
+          <td class="px-4 py-3">Rotativo</td>
+          <td class="px-4 py-3">Turnos alternados</td>
+          <td class="px-4 py-3">Hospitales y servicios</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 id="marco-legal" class="font-display text-2xl text-white mt-10">Marco legal en Brasil</h2>
+  <p>
+    Los puntos legales clave para evaluar una escala 6x1 son: límite de jornada, pago de horas extras,
+    intervalo intrajornada, descanso entre jornadas y descanso semanal remunerado. Ninguna planificación de
+    turnos puede pasar por encima de estos mínimos.
+  </p>
+  <p>
+    En contextos reales, el mayor problema no es la existencia de la escala, sino la ejecución deficiente:
+    horas extra no registradas, descanso irregular y fallas de control de punto. Por eso, el seguimiento con
+    evidencia documental es parte de la estrategia de cumplimiento.
+  </p>
+
+  <h2 id="sectores" class="font-display text-2xl text-white mt-10">Sectores más afectados</h2>
+  <p>
+    La escala 6x1 tiene impacto distinto según sector. En comercio y alimentación, el foco suele ser domingo y
+    feriados. En salud y seguridad, el foco está en fatiga acumulada y gestión de relevo. En logística, el
+    desafío principal es picos de demanda y previsibilidad de descanso.
+  </p>
+  <p>
+    Si trabajas en alguno de estos sectores, te conviene revisar nuestra guía específica de
+    <a href="/derechos-laborales-escala-6x1/" class="text-brand-400 hover:text-brand-300">derechos laborales en la 6x1</a>
+    y usar la
+    <a href="/calculadora-horas-extras-6x1/" class="text-brand-400 hover:text-brand-300">calculadora de horas extras</a>
+    para estimar diferencias de pago.
+  </p>
+
+  <h2 id="alternativas" class="font-display text-2xl text-white mt-10">6x1 vs 5x2 vs 4x3</h2>
+  <p>
+    El debate público se concentra en productividad, salud mental, retención de talento y costo de transición.
+    La 5x2 ya es estándar en oficinas; la 4x3 aparece en pilotos internacionales y en propuestas legislativas.
+    Para una empresa, el cambio no es solo "menos horas": exige rediseño de procesos, cobertura de turnos y
+    metas de productividad por hora.
+  </p>
+  <div class="bg-ink-900/40 rounded-xl border border-ink-800/50 p-5">
+    <h3 class="text-white font-semibold mb-2">Checklist rápido de transición</h3>
+    <ul class="list-disc pl-6 space-y-2 text-sm">
+      <li>Mapear horas extras recurrentes por equipo.</li>
+      <li>Recalcular dimensionamiento mínimo por turno.</li>
+      <li>Redefinir SLA y objetivos por hora productiva.</li>
+      <li>Negociar regla de transición en convenio aplicable.</li>
+    </ul>
+  </div>
+
+  <h2 id="que-hacer" class="font-display text-2xl text-white mt-10">Qué hacer si hay incumplimiento</h2>
+  <ol class="list-decimal pl-6 space-y-2">
+    <li>Guardar pruebas: escalas, capturas de punto, mensajes y recibos.</li>
+    <li>Calcular diferencia estimada con base mensual.</li>
+    <li>Solicitar ajuste interno por escrito, con fechas y valores.</li>
+    <li>Consultar sindicato o asesoría laboral para estrategia formal.</li>
+  </ol>
+  <p>
+    Si tu caso involucra domingos, feriados o banco de horas, revisa también nuestro análisis del
+    <a href="/fin-escala-6x1-reforma-laboral/" class="text-brand-400 hover:text-brand-300">escenario de reforma y fin de la 6x1</a>,
+    donde explicamos impactos de transición para contratos vigentes.
+  </p>
+
+  <h2 id="fuentes" class="font-display text-2xl text-white mt-10">Fuentes oficiales recomendadas</h2>
+  <ul class="list-disc pl-6 space-y-2">
+    <li>
+      Constitución Federal (texto consolidado):
+      <a class="text-brand-400 hover:text-brand-300" href="https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm" target="_blank" rel="noopener noreferrer">Planalto</a>
+    </li>
+    <li>
+      CLT (Decreto-Lei 5.452/1943):
+      <a class="text-brand-400 hover:text-brand-300" href="https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452.htm" target="_blank" rel="noopener noreferrer">Planalto</a>
+    </li>
+    <li>
+      Tramitación legislativa federal:
+      <a class="text-brand-400 hover:text-brand-300" href="https://www25.senado.leg.br/web/atividade/materias" target="_blank" rel="noopener noreferrer">Senado Federal</a>
+      y
+      <a class="text-brand-400 hover:text-brand-300" href="https://www.camara.leg.br/" target="_blank" rel="noopener noreferrer">Cámara de Diputados</a>
+    </li>
+  </ul>
+
+  <p class="text-sm text-ink-400">
+    Nota editorial: esta guía es informativa y no sustituye asesoría jurídica individual.
+  </p>
+</ArticlePageLayout>

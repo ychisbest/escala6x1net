@@ -1,0 +1,57 @@
+---
+import ContentPageLayout from '../../layouts/ContentPageLayout.astro';
+
+const blogSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Blog',
+  name: 'Blog Escala6x1.net',
+  url: 'https://escala6x1.net/blog/',
+  inLanguage: 'es',
+};
+---
+
+<ContentPageLayout
+  title="Blog sobre Escala 6x1 y Jornada Laboral | Escala6x1.net"
+  heading="Blog: Escala 6x1, Derechos y Reforma Laboral"
+  description="Índice editorial con guías y análisis sobre jornada 6x1, derechos del trabajador, horas extras y reforma laboral en Brasil."
+  canonicalPath="/blog/"
+  includeAdsense={true}
+  schemas={[blogSchema]}
+>
+  <p>
+    Este índice reúne todos los contenidos editoriales de Escala6x1.net. La estructura está organizada para
+    resolver primero lo esencial y luego profundizar por tema.
+  </p>
+
+  <div class="grid md:grid-cols-2 gap-4 mt-6">
+    <a href="/guia-escala-6x1/" class="bg-ink-900/60 border border-ink-700/50 rounded-2xl p-6 hover:border-brand-500/50 transition-colors">
+      <p class="text-xs uppercase tracking-wide text-ink-500 mb-2">Pillar</p>
+      <h2 class="text-xl text-white font-semibold mb-2">Guía Completa de la Escala 6x1</h2>
+      <p class="text-ink-400 text-sm">Panorama integral: definición, funcionamiento, marco legal, sectores y acciones prácticas.</p>
+    </a>
+
+    <a href="/derechos-laborales-escala-6x1/" class="bg-ink-900/60 border border-ink-700/50 rounded-2xl p-6 hover:border-brand-500/50 transition-colors">
+      <p class="text-xs uppercase tracking-wide text-ink-500 mb-2">Cluster</p>
+      <h2 class="text-xl text-white font-semibold mb-2">Derechos Laborales en la 6x1</h2>
+      <p class="text-ink-400 text-sm">Descanso semanal, horas extra, domingos, banco de horas y documentación útil.</p>
+    </a>
+
+    <a href="/fin-escala-6x1-reforma-laboral/" class="bg-ink-900/60 border border-ink-700/50 rounded-2xl p-6 hover:border-brand-500/50 transition-colors">
+      <p class="text-xs uppercase tracking-wide text-ink-500 mb-2">Cluster</p>
+      <h2 class="text-xl text-white font-semibold mb-2">Fin de la Escala 6x1: Escenarios</h2>
+      <p class="text-ink-400 text-sm">Qué puede cambiar en la reforma y cómo prepararse en trabajadores y empresas.</p>
+    </a>
+
+    <a href="/calculadora-horas-extras-6x1/" class="bg-ink-900/60 border border-ink-700/50 rounded-2xl p-6 hover:border-brand-500/50 transition-colors">
+      <p class="text-xs uppercase tracking-wide text-ink-500 mb-2">Recurso</p>
+      <h2 class="text-xl text-white font-semibold mb-2">Calculadora de Horas Extras 6x1</h2>
+      <p class="text-ink-400 text-sm">Herramienta para estimar diferencia de pago mensual con adicionales del 50% y 100%.</p>
+    </a>
+
+    <a href="/faq-escala-6x1/" class="bg-ink-900/60 border border-ink-700/50 rounded-2xl p-6 hover:border-brand-500/50 transition-colors md:col-span-2">
+      <p class="text-xs uppercase tracking-wide text-ink-500 mb-2">FAQ</p>
+      <h2 class="text-xl text-white font-semibold mb-2">Preguntas Frecuentes sobre Jornada 6x1</h2>
+      <p class="text-ink-400 text-sm">Respuestas directas para dudas rápidas sobre legalidad, descanso, domingos y horas extras.</p>
+    </a>
+  </div>
+</ContentPageLayout>

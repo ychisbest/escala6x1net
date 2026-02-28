@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://escala6x1.net/sitemap-index.xml

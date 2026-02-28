@@ -1,0 +1,200 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+interface TocItem {
+  id: string;
+  label: string;
+}
+
+interface FaqItem {
+  question: string;
+  answer: string;
+}
+
+interface Props {
+  title: string;
+  heading: string;
+  description: string;
+  canonicalPath: string;
+  updatedAt?: string;
+  publishedAt?: string;
+  authorName?: string;
+  readTime?: string;
+  toc?: TocItem[];
+  faqItems?: FaqItem[];
+}
+
+const {
+  title,
+  heading,
+  description,
+  canonicalPath,
+  updatedAt = '28 de febrero de 2026',
+  publishedAt = '15 de enero de 2026',
+  authorName = 'Equipo Editorial Escala6x1.net',
+  readTime = '10 min',
+  toc = [],
+  faqItems = [],
+} = Astro.props;
+
+const canonicalUrl = `https://escala6x1.net${canonicalPath}`;
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: heading,
+  description,
+  author: {
+    '@type': 'Organization',
+    name: authorName,
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Escala6x1.net',
+  },
+  datePublished: publishedAt,
+  dateModified: '2026-02-28',
+  mainEntityOfPage: canonicalUrl,
+  inLanguage: 'es',
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Inicio',
+      item: 'https://escala6x1.net/',
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: heading,
+      item: canonicalUrl,
+    },
+  ],
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqItems.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
+  })),
+};
+
+const schemas = [articleSchema, breadcrumbSchema, ...(faqItems.length > 0 ? [faqSchema] : [])];
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonicalPath={canonicalPath}
+  includeHomeSchemas={false}
+  includeAdsense={true}
+  schemas={schemas}
+  ogType="article"
+>
+  <header class="sticky top-0 z-40 border-b border-ink-800/60 bg-ink-950/95 backdrop-blur-md">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+      <a href="/" class="flex items-center gap-3 group">
+        <div
+          class="w-10 h-10 bg-brand-500 rounded-lg flex items-center justify-center font-mono text-sm font-bold text-white group-hover:bg-brand-400 transition-colors"
+        >
+          6×1
+        </div>
+        <div><span class="font-display text-lg text-white">Escala6x1</span><span class="text-brand-500">.net</span></div>
+      </a>
+      <nav class="hidden md:flex items-center gap-4 text-sm">
+        <a href="/guia-escala-6x1/" class="text-ink-300 hover:text-brand-400 transition-colors">Guía</a>
+        <a href="/faq-escala-6x1/" class="text-ink-300 hover:text-brand-400 transition-colors">FAQ</a>
+        <a href="/calculadora-horas-extras-6x1/" class="text-ink-300 hover:text-brand-400 transition-colors">Calculadora</a>
+        <a href="/blog/" class="text-ink-300 hover:text-brand-400 transition-colors">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido-principal" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+    <nav aria-label="Migas de pan" class="mb-5 text-sm text-ink-400">
+      <a href="/" class="hover:text-brand-400 transition-colors">Inicio</a>
+      <span class="mx-2 text-ink-600">/</span>
+      <span>{heading}</span>
+    </nav>
+
+    <div class="lg:grid lg:grid-cols-[1fr_280px] lg:gap-10">
+      <article class="bg-ink-900/40 border border-ink-800/50 rounded-2xl p-6 md:p-10">
+        <p class="text-xs tracking-wide uppercase text-ink-400 mb-3">Publicado: {publishedAt} · Actualizado: {updatedAt}</p>
+        <h1 class="font-display text-3xl md:text-5xl text-white leading-tight mb-6">{heading}</h1>
+        <div class="flex flex-wrap gap-x-4 gap-y-2 text-sm text-ink-400 mb-8">
+          <span>Autor: {authorName}</span>
+          <span>Lectura: {readTime}</span>
+        </div>
+
+        <!-- Ad Zone: Below Header (Leaderboard 728x90) -->
+        <div class="ad-zone ad-zone--header mb-8 rounded-xl border border-ink-800/60 bg-ink-900/30 p-4 text-xs text-ink-500" aria-hidden="true">
+          <!-- Google AdSense: Insert ad unit code here after approval -->
+          Zona de anuncio principal (reservada para AdSense)
+        </div>
+
+        <div class="space-y-6 text-ink-300 leading-relaxed">
+          <slot />
+        </div>
+
+        <!-- Ad Zone: In-Content (Rectangle 336x280) -->
+        <div class="ad-zone ad-zone--incontent mt-10 rounded-xl border border-ink-800/60 bg-ink-900/30 p-4 text-xs text-ink-500" aria-hidden="true">
+          <!-- Google AdSense: Insert ad unit code here after approval -->
+          Zona de anuncio en contenido (reservada para AdSense)
+        </div>
+      </article>
+
+      <aside class="hidden lg:block">
+        <div class="sticky top-24 space-y-4">
+          {toc.length > 0 && (
+            <div class="bg-ink-900/40 border border-ink-800/50 rounded-2xl p-5">
+              <h2 class="font-display text-lg text-white mb-4">Contenido</h2>
+              <nav class="flex flex-col gap-2" aria-label="Tabla de contenidos">
+                {toc.map((item) => (
+                  <a class="text-sm text-ink-400 hover:text-brand-400 transition-colors" href={`#${item.id}`}>{item.label}</a>
+                ))}
+              </nav>
+            </div>
+          )}
+
+          <!-- Ad Zone: Sidebar (Skyscraper 300x250) -->
+          <div class="ad-zone ad-zone--sidebar rounded-2xl border border-ink-800/60 bg-ink-900/30 p-4 text-xs text-ink-500" aria-hidden="true">
+            <!-- Google AdSense: Insert ad unit code here after approval -->
+            Zona de anuncio lateral (reservada para AdSense)
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Ad Zone: Before Footer (Leaderboard 728x90) -->
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-6">
+    <div class="ad-zone ad-zone--footer rounded-xl border border-ink-800/60 bg-ink-900/30 p-4 text-xs text-ink-500" aria-hidden="true">
+      <!-- Google AdSense: Insert ad unit code here after approval -->
+      Zona de anuncio pre-footer (reservada para AdSense)
+    </div>
+  </div>
+
+  <footer class="border-t border-ink-800/50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col md:flex-row gap-3 md:items-center md:justify-between">
+      <p class="text-sm text-ink-500">&copy; 2026 Escala6x1.net</p>
+      <nav class="flex flex-wrap gap-x-4 gap-y-2">
+        <a href="/about/" class="text-sm text-ink-400 hover:text-brand-400 transition-colors">Sobre Nosotros</a>
+        <a href="/contact/" class="text-sm text-ink-400 hover:text-brand-400 transition-colors">Contacto</a>
+        <a href="/privacy-policy/" class="text-sm text-ink-400 hover:text-brand-400 transition-colors">Política de Privacidad</a>
+        <a href="/terms-of-service/" class="text-sm text-ink-400 hover:text-brand-400 transition-colors">Términos de Uso</a>
+        <a href="/disclaimer/" class="text-sm text-ink-400 hover:text-brand-400 transition-colors">Descargo de Responsabilidad</a>
+      </nav>
+    </div>
+  </footer>
+</BaseLayout>
