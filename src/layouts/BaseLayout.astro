@@ -4,15 +4,23 @@ import '../styles/global.css';
 interface Props {
   title?: string;
   description?: string;
+  canonicalPath?: string;
+  keywords?: string;
+  includeHomeSchemas?: boolean;
 }
 
 const {
   title = 'Escala 6x1 — Guía Completa sobre la Jornada Laboral 6x1 | Todo lo que Necesitas Saber',
   description = 'Descubre todo sobre la escala 6x1: qué es, cómo funciona, derechos laborales, propuestas legislativas para su eliminación, impacto en la salud y productividad. Guía actualizada 2026.',
+  canonicalPath = '/',
+  keywords = 'escala 6x1, jornada laboral 6x1, fin escala 6x1, escala trabajo 6x1, jornada 6x1, derechos laborales, reducción jornada laboral, 44 horas semanales, descanso semanal, escala laboral, CLT, reforma laboral',
+  includeHomeSchemas = true,
 } = Astro.props;
 
-const siteUrl = 'https://escala6x1.net/';
-const ogImage = 'https://escala6x1.net/og-image.jpg';
+const siteOrigin = 'https://escala6x1.net';
+const canonicalUrl = new URL(canonicalPath, siteOrigin).toString();
+const ogImage = `${siteOrigin}/og-image.jpg`;
+const isHome = canonicalPath === '/';
 
 const websiteSchema = {
   '@context': 'https://schema.org',
@@ -113,39 +121,36 @@ const breadcrumbSchema = {
     <title>{title}</title>
     <meta name="title" content={title} />
     <meta name="description" content={description} />
-    <meta
-      name="keywords"
-      content="escala 6x1, jornada laboral 6x1, fin escala 6x1, escala trabajo 6x1, jornada 6x1, derechos laborales, reducción jornada laboral, 44 horas semanales, descanso semanal, escala laboral, CLT, reforma laboral"
-    />
+    <meta name="keywords" content={keywords} />
     <meta name="author" content="Escala6x1.net" />
     <meta
       name="robots"
       content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
     />
-    <link rel="canonical" href={siteUrl} />
+    <link rel="canonical" href={canonicalUrl} />
 
     <meta property="og:type" content="website" />
-    <meta property="og:url" content={siteUrl} />
-    <meta property="og:title" content="Escala 6x1 — Guía Completa sobre la Jornada Laboral 6x1" />
-    <meta
-      property="og:description"
-      content="Todo sobre la escala 6x1: funcionamiento, derechos, propuestas legislativas y el futuro de la jornada laboral. Guía actualizada 2026."
-    />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
     <meta property="og:image" content={ogImage} />
     <meta property="og:locale" content="es_ES" />
     <meta property="og:site_name" content="Escala6x1.net" />
 
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content={siteUrl} />
-    <meta property="twitter:title" content="Escala 6x1 — Guía Completa sobre la Jornada Laboral 6x1" />
-    <meta
-      property="twitter:description"
-      content="Todo sobre la escala 6x1: funcionamiento, derechos, propuestas legislativas y el futuro de la jornada laboral."
-    />
+    <meta property="twitter:url" content={canonicalUrl} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
 
-    <link rel="alternate" hreflang="es" href="https://escala6x1.net/" />
-    <link rel="alternate" hreflang="pt-BR" href="https://escala6x1.net/pt/" />
-    <link rel="alternate" hreflang="x-default" href="https://escala6x1.net/" />
+    {
+      isHome && (
+        <>
+          <link rel="alternate" hreflang="es" href="https://escala6x1.net/" />
+          <link rel="alternate" hreflang="pt-BR" href="https://escala6x1.net/pt/" />
+          <link rel="alternate" hreflang="x-default" href="https://escala6x1.net/" />
+        </>
+      )
+    }
 
     <link
       rel="icon"
@@ -160,10 +165,16 @@ const breadcrumbSchema = {
       rel="stylesheet"
     />
 
-    <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)}></script>
-    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
-    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
-    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+    {
+      includeHomeSchemas && (
+        <>
+          <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)}></script>
+          <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+          <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+          <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+        </>
+      )
+    }
   </head>
 
   <body class="bg-ink-950 text-ink-200 antialiased">
