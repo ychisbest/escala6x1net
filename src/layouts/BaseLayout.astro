@@ -1,0 +1,177 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Escala 6x1 — Guía Completa sobre la Jornada Laboral 6x1 | Todo lo que Necesitas Saber',
+  description = 'Descubre todo sobre la escala 6x1: qué es, cómo funciona, derechos laborales, propuestas legislativas para su eliminación, impacto en la salud y productividad. Guía actualizada 2026.',
+} = Astro.props;
+
+const siteUrl = 'https://escala6x1.net/';
+const ogImage = 'https://escala6x1.net/og-image.jpg';
+
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Escala 6x1',
+  url: 'https://escala6x1.net',
+  description: 'Guía completa sobre la escala laboral 6x1.',
+  inLanguage: 'es',
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: '¿Qué es la escala 6x1?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'La escala 6x1 es un modelo de jornada laboral donde el trabajador trabaja 6 días consecutivos y descansa 1 día. La jornada diaria es de hasta 8 horas, respetando el límite de 44 horas semanales.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: '¿Se aprobó el fin de la escala 6x1?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'En diciembre de 2025, la CCJ del Senado aprobó una propuesta para eliminar la escala 6x1 y reducir la jornada a 36 horas semanales. La propuesta aún necesita aprobación en plenario.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: '¿Cuántas horas se trabajan en la escala 6x1?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Hasta 44 horas semanales distribuidas en 6 días. Generalmente 7h20m por día o 8h de lunes a viernes con 4h el sábado.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: '¿Cuál es la diferencia entre 6x1, 5x2 y 4x3?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: '6x1: 6 días trabajo, 1 descanso. 5x2: 5 días trabajo, 2 descanso (oficinas). 4x3: 4 días trabajo, 3 descanso (propuesta nueva, 36h semanales).',
+      },
+    },
+  ],
+};
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'Escala 6x1: Guía Completa',
+  author: {
+    '@type': 'Organization',
+    name: 'Escala6x1.net',
+  },
+  datePublished: '2026-01-15',
+  dateModified: '2026-02-28',
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Inicio',
+      item: 'https://escala6x1.net/',
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: '¿Qué es?',
+      item: 'https://escala6x1.net/#que-es',
+    },
+    {
+      '@type': 'ListItem',
+      position: 3,
+      name: 'Legislación',
+      item: 'https://escala6x1.net/#legislacion',
+    },
+    {
+      '@type': 'ListItem',
+      position: 4,
+      name: 'FAQ',
+      item: 'https://escala6x1.net/#faq',
+    },
+  ],
+};
+---
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <meta
+      name="keywords"
+      content="escala 6x1, jornada laboral 6x1, fin escala 6x1, escala trabajo 6x1, jornada 6x1, derechos laborales, reducción jornada laboral, 44 horas semanales, descanso semanal, escala laboral, CLT, reforma laboral"
+    />
+    <meta name="author" content="Escala6x1.net" />
+    <meta
+      name="robots"
+      content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    />
+    <link rel="canonical" href={siteUrl} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={siteUrl} />
+    <meta property="og:title" content="Escala 6x1 — Guía Completa sobre la Jornada Laboral 6x1" />
+    <meta
+      property="og:description"
+      content="Todo sobre la escala 6x1: funcionamiento, derechos, propuestas legislativas y el futuro de la jornada laboral. Guía actualizada 2026."
+    />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:site_name" content="Escala6x1.net" />
+
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={siteUrl} />
+    <meta property="twitter:title" content="Escala 6x1 — Guía Completa sobre la Jornada Laboral 6x1" />
+    <meta
+      property="twitter:description"
+      content="Todo sobre la escala 6x1: funcionamiento, derechos, propuestas legislativas y el futuro de la jornada laboral."
+    />
+
+    <link rel="alternate" hreflang="es" href="https://escala6x1.net/" />
+    <link rel="alternate" hreflang="pt-BR" href="https://escala6x1.net/pt/" />
+    <link rel="alternate" hreflang="x-default" href="https://escala6x1.net/" />
+
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚖️</text></svg>"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </head>
+
+  <body class="bg-ink-950 text-ink-200 antialiased">
+    <a
+      href="#contenido-principal"
+      class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-brand-500 text-white px-4 py-2 rounded z-50"
+      >Ir al contenido principal</a
+    >
+    <slot />
+  </body>
+</html>

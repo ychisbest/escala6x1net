@@ -9,7 +9,7 @@ export default defineConfig({
   },
   integrations: [sitemap()],
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'es',
+    locales: ['es'],
   },
 });
