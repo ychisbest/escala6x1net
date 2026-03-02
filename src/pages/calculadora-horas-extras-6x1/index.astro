@@ -2,10 +2,10 @@
 import ArticlePageLayout from '../../layouts/ArticlePageLayout.astro';
 
 const toc = [
-  { id: 'como-usar', label: 'Cómo usar la calculadora' },
-  { id: 'herramienta', label: 'Calculadora interactiva' },
-  { id: 'formula', label: 'Fórmula de cálculo' },
-  { id: 'ejemplo', label: 'Ejemplo completo' },
+  { id: 'como-usar', label: 'Como usar a calculadora' },
+  { id: 'ferramenta', label: 'Calculadora interativa' },
+  { id: 'formula', label: 'Formula de calculo' },
+  { id: 'exemplo', label: 'Exemplo completo' },
   { id: 'aviso', label: 'Aviso importante' },
 ];
 ---
@@ -13,41 +13,41 @@ const toc = [
 <ArticlePageLayout
   title="Calculadora de Horas Extras 6x1 | Escala6x1.net"
   heading="Calculadora de Horas Extras para Escala 6x1"
-  description="Herramienta gratuita para estimar pago de horas extras en la jornada 6x1 con adicional del 50% y 100%, incluyendo domingos y feriados."
+  description="Ferramenta gratuita para estimar pagamento de horas extras na jornada 6x1 com adicional de 50% e 100%, incluindo domingos e feriados."
   canonicalPath="/calculadora-horas-extras-6x1/"
   readTime="8 min"
   toc={toc}
 >
   <p>
-    Esta calculadora te ayuda a estimar el valor mensual de horas extras en escala 6x1. Es útil para revisión
-    rápida de nómina, negociación interna o control personal de jornada.
+    Esta calculadora ajuda a estimar o valor mensal de horas extras na escala 6x1. E util para revisao rapida de
+    folha, negociacao interna e controle pessoal da jornada.
   </p>
 
-  <h2 id="como-usar" class="font-display text-2xl text-white mt-10">Cómo usar la calculadora</h2>
+  <h2 id="como-usar" class="font-display text-2xl text-white mt-10">Como usar a calculadora</h2>
   <ol class="list-decimal pl-6 space-y-2">
-    <li>Ingresa tu salario mensual bruto.</li>
-    <li>Define cuántas horas extras normales hiciste en el mes.</li>
-    <li>Define cuántas horas extras hiciste en domingos o feriados.</li>
-    <li>Presiona "Calcular" para ver la estimación.</li>
+    <li>Informe seu salario mensal bruto.</li>
+    <li>Defina quantas horas extras comuns voce fez no mes.</li>
+    <li>Defina quantas horas extras voce fez em domingos ou feriados.</li>
+    <li>Clique em "Calcular" para ver a estimativa.</li>
   </ol>
 
-  <h2 id="herramienta" class="font-display text-2xl text-white mt-10">Calculadora interactiva</h2>
+  <h2 id="ferramenta" class="font-display text-2xl text-white mt-10">Calculadora interativa</h2>
   <section class="rounded-2xl border border-ink-700/50 bg-ink-900/50 p-6">
     <div class="grid md:grid-cols-2 gap-4">
       <label class="text-sm">
-        <span class="block text-ink-300 mb-2">Salario mensual (R$)</span>
+        <span class="block text-ink-300 mb-2">Salario mensal (R$)</span>
         <input id="salary" type="number" min="0" step="0.01" class="w-full rounded-lg border border-ink-700 bg-ink-950 px-3 py-2 text-white" value="2800" />
       </label>
       <label class="text-sm">
-        <span class="block text-ink-300 mb-2">Horas extras normales (50%)</span>
+        <span class="block text-ink-300 mb-2">Horas extras normais (50%)</span>
         <input id="extra50" type="number" min="0" step="0.1" class="w-full rounded-lg border border-ink-700 bg-ink-950 px-3 py-2 text-white" value="12" />
       </label>
       <label class="text-sm">
-        <span class="block text-ink-300 mb-2">Horas en domingo/feriado (100%)</span>
+        <span class="block text-ink-300 mb-2">Horas em domingo/feriado (100%)</span>
         <input id="extra100" type="number" min="0" step="0.1" class="w-full rounded-lg border border-ink-700 bg-ink-950 px-3 py-2 text-white" value="4" />
       </label>
       <label class="text-sm">
-        <span class="block text-ink-300 mb-2">Horas base mensuales</span>
+        <span class="block text-ink-300 mb-2">Horas base mensais</span>
         <input id="baseHours" type="number" min="1" step="1" class="w-full rounded-lg border border-ink-700 bg-ink-950 px-3 py-2 text-white" value="220" />
       </label>
     </div>
@@ -62,7 +62,7 @@ const toc = [
 
     <div class="grid md:grid-cols-3 gap-3 mt-6 text-sm">
       <div class="rounded-xl border border-ink-700/50 bg-ink-950/70 p-4">
-        <p class="text-ink-400">Valor hora base</p>
+        <p class="text-ink-400">Valor da hora base</p>
         <p id="hourValue" class="text-white text-xl font-semibold mt-1">R$ 0.00</p>
       </div>
       <div class="rounded-xl border border-ink-700/50 bg-ink-950/70 p-4">
@@ -76,43 +76,41 @@ const toc = [
     </div>
 
     <div class="rounded-xl border border-sage-500/30 bg-sage-500/10 p-4 mt-4">
-      <p class="text-sm text-sage-300">Estimación total de extras en el mes</p>
+      <p class="text-sm text-sage-300">Estimativa total de extras no mes</p>
       <p id="grandTotal" class="text-2xl font-semibold text-white">R$ 0.00</p>
     </div>
   </section>
 
-  <h2 id="formula" class="font-display text-2xl text-white mt-10">Fórmula de cálculo</h2>
-  <p>
-    La lógica aplicada en esta herramienta es:
-  </p>
+  <h2 id="formula" class="font-display text-2xl text-white mt-10">Formula de calculo</h2>
+  <p>A logica aplicada nesta ferramenta e:</p>
   <ul class="list-disc pl-6 space-y-2">
-    <li>Valor hora base = salario mensual / horas base del mes.</li>
-    <li>Hora extra 50% = valor hora base × 1.5.</li>
-    <li>Hora extra 100% = valor hora base × 2.</li>
-    <li>Total = (horas 50% × hora 50%) + (horas 100% × hora 100%).</li>
+    <li>Valor da hora base = salario mensal / horas base do mes.</li>
+    <li>Hora extra 50% = valor da hora base x 1.5.</li>
+    <li>Hora extra 100% = valor da hora base x 2.</li>
+    <li>Total = (horas 50% x hora 50%) + (horas 100% x hora 100%).</li>
   </ul>
 
-  <h2 id="ejemplo" class="font-display text-2xl text-white mt-10">Ejemplo completo</h2>
+  <h2 id="exemplo" class="font-display text-2xl text-white mt-10">Exemplo completo</h2>
   <p>
-    Si el salario es R$ 2.800 y la base mensual es 220 horas, el valor hora base es R$ 12,73. Con 12 horas
-    extra al 50% y 4 horas al 100%, la estimación es:
+    Se o salario for R$ 2.800 e a base mensal for 220 horas, o valor da hora base e R$ 12,73. Com 12 horas extra
+    a 50% e 4 horas a 100%, a estimativa e:
   </p>
   <ul class="list-disc pl-6 space-y-2">
-    <li>12 × (12,73 × 1,5) = R$ 229,14</li>
-    <li>4 × (12,73 × 2) = R$ 101,84</li>
+    <li>12 x (12,73 x 1,5) = R$ 229,14</li>
+    <li>4 x (12,73 x 2) = R$ 101,84</li>
     <li>Total estimado = R$ 330,98</li>
   </ul>
 
   <h2 id="aviso" class="font-display text-2xl text-white mt-10">Aviso importante</h2>
   <p>
-    Esta calculadora ofrece una estimación educativa. Convenios colectivos, adicionales específicos y reglas de
-    compensación pueden alterar el resultado final.
+    Esta calculadora oferece estimativa educacional. Convencoes coletivas, adicionais especificos e regras de
+    compensacao podem alterar o resultado final.
   </p>
   <p>
-    Para contexto legal y operativo complementario, consulta la
-    <a href="/guia-escala-6x1/" class="text-brand-400 hover:text-brand-300">guía completa de la escala 6x1</a>
-    y la página de
-    <a href="/derechos-laborales-escala-6x1/" class="text-brand-400 hover:text-brand-300">derechos laborales</a>.
+    Para contexto legal e operacional complementar, consulte o
+    <a href="/guia-escala-6x1/" class="text-brand-400 hover:text-brand-300">guia completo da escala 6x1</a>
+    e a pagina de
+    <a href="/derechos-laborales-escala-6x1/" class="text-brand-400 hover:text-brand-300">direitos trabalhistas</a>.
   </p>
 
   <script is:inline>

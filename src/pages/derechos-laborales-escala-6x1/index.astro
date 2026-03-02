@@ -2,118 +2,114 @@
 import ArticlePageLayout from '../../layouts/ArticlePageLayout.astro';
 
 const toc = [
-  { id: 'derechos-minimos', label: 'Derechos mínimos' },
-  { id: 'horas-extras', label: 'Horas extras y banco de horas' },
-  { id: 'domingos', label: 'Domingos y feriados' },
-  { id: 'documentacion', label: 'Cómo documentar incumplimientos' },
-  { id: 'acciones', label: 'Plan de acción práctico' },
+  { id: 'direitos-minimos', label: 'Direitos minimos' },
+  { id: 'horas-extras', label: 'Horas extras e banco de horas' },
+  { id: 'domingos', label: 'Domingos e feriados' },
+  { id: 'documentacao', label: 'Como documentar descumprimentos' },
+  { id: 'acoes', label: 'Plano de acao pratico' },
 ];
 ---
 
 <ArticlePageLayout
-  title="Derechos Laborales en la Escala 6x1 | Escala6x1.net"
-  heading="Derechos Laborales del Trabajador en la Escala 6x1"
-  description="Resumen práctico de derechos en la jornada 6x1: límites de horas, descanso semanal, adicional nocturno, banco de horas y cómo reclamar con evidencia."
+  title="Direitos Trabalhistas na Escala 6x1 | Escala6x1.net"
+  heading="Direitos do Trabalhador na Escala 6x1"
+  description="Resumo pratico de direitos na jornada 6x1: limites de horas, descanso semanal, adicional noturno, banco de horas e como reclamar com evidencias."
   canonicalPath="/derechos-laborales-escala-6x1/"
   readTime="11 min"
   toc={toc}
 >
   <p>
-    Trabajar bajo escala 6x1 no elimina tus derechos. Esta guía concentra los puntos que más generan dudas:
-    cuándo hay hora extra, cómo se calcula el descanso semanal remunerado, qué cambia en domingos/feriados y
-    qué documentos debes guardar para corregir pagos o turnos irregulares.
+    Trabalhar em escala 6x1 nao elimina seus direitos. Este guia resume os pontos que mais geram duvidas: quando
+    existe hora extra, como calcular descanso semanal remunerado, o que muda em domingos e feriados e quais
+    documentos guardar para corrigir pagamentos ou escalas irregulares.
   </p>
 
-  <h2 id="derechos-minimos" class="font-display text-2xl text-white mt-10">Derechos mínimos que no se negocian</h2>
+  <h2 id="direitos-minimos" class="font-display text-2xl text-white mt-10">Direitos minimos que nao se negociam</h2>
   <ul class="list-disc pl-6 space-y-2">
-    <li>Límite general de jornada semanal conforme Constitución y CLT.</li>
-    <li>Descanso semanal remunerado de al menos 24 horas consecutivas.</li>
-    <li>Intervalo entre jornadas para recuperación física y mental.</li>
-    <li>Intervalo intrajornada para alimentación y descanso.</li>
-    <li>Adicional de horas extras y adicional nocturno cuando corresponda.</li>
+    <li>Limite geral de jornada semanal conforme Constituicao e CLT.</li>
+    <li>Descanso semanal remunerado de pelo menos 24 horas consecutivas.</li>
+    <li>Intervalo entre jornadas para recuperacao fisica e mental.</li>
+    <li>Intervalo intrajornada para alimentacao e descanso.</li>
+    <li>Adicional de horas extras e adicional noturno quando aplicavel.</li>
   </ul>
   <p>
-    En la práctica, el conflicto habitual aparece cuando la empresa cumple la escala formal, pero no cumple el
-    registro real de jornada. La diferencia entre escala publicada y jornada efectivamente trabajada puede
-    generar pasivo laboral.
+    Na pratica, o conflito mais comum aparece quando a empresa cumpre a escala formal, mas nao cumpre o registro
+    real da jornada. A diferenca entre escala publicada e jornada efetivamente trabalhada pode gerar passivo.
   </p>
 
-  <h2 id="horas-extras" class="font-display text-2xl text-white mt-10">Horas extras y banco de horas</h2>
+  <h2 id="horas-extras" class="font-display text-2xl text-white mt-10">Horas extras e banco de horas</h2>
   <p>
-    Toda hora por encima del límite diario o semanal puede configurar extra, salvo compensación válida en banco
-    de horas dentro del plazo legal y con respaldo documental. Sin control transparente, el banco de horas se
-    convierte en la principal fuente de litigio.
+    Toda hora acima do limite diario ou semanal pode configurar extra, salvo compensacao valida em banco de horas,
+    dentro do prazo legal e com documentacao. Sem controle transparente, o banco de horas vira fonte de litigio.
   </p>
   <div class="overflow-x-auto rounded-xl border border-ink-700/50">
     <table class="w-full text-sm">
       <thead>
         <tr class="bg-ink-800/80">
-          <th class="text-left px-4 py-3 text-white">Situación</th>
-          <th class="text-left px-4 py-3 text-white">Regla general</th>
-          <th class="text-left px-4 py-3 text-white">Riesgo si no cumple</th>
+          <th class="text-left px-4 py-3 text-white">Situacao</th>
+          <th class="text-left px-4 py-3 text-white">Regra geral</th>
+          <th class="text-left px-4 py-3 text-white">Risco se nao cumprir</th>
         </tr>
       </thead>
       <tbody>
         <tr class="border-t border-ink-800/50">
-          <td class="px-4 py-3">Hora extra en día normal</td>
-          <td class="px-4 py-3">Adicional mínimo de 50%</td>
-          <td class="px-4 py-3">Diferencias salariales + multa</td>
+          <td class="px-4 py-3">Hora extra em dia normal</td>
+          <td class="px-4 py-3">Adicional minimo de 50%</td>
+          <td class="px-4 py-3">Diferencas salariais e multa</td>
         </tr>
         <tr class="border-t border-ink-800/50">
-          <td class="px-4 py-3">Domingo/Feriado sin compensación</td>
-          <td class="px-4 py-3">Pago en condiciones reforzadas</td>
-          <td class="px-4 py-3">Pasivo elevado por acumulación</td>
+          <td class="px-4 py-3">Domingo/feriado sem compensacao</td>
+          <td class="px-4 py-3">Pagamento em condicoes reforcadas</td>
+          <td class="px-4 py-3">Passivo elevado por acumulacao</td>
         </tr>
         <tr class="border-t border-ink-800/50">
           <td class="px-4 py-3">Banco de horas</td>
-          <td class="px-4 py-3">Acuerdo válido + plazo de compensación</td>
-          <td class="px-4 py-3">Invalidación del banco de horas</td>
+          <td class="px-4 py-3">Acordo valido e prazo de compensacao</td>
+          <td class="px-4 py-3">Invalidacao do banco de horas</td>
         </tr>
       </tbody>
     </table>
   </div>
   <p>
-    Puedes usar nuestra
+    Voce pode usar nossa
     <a href="/calculadora-horas-extras-6x1/" class="text-brand-400 hover:text-brand-300">calculadora de horas extras 6x1</a>
-    para una estimación inicial antes de hablar con RRHH o sindicato.
+    para uma estimativa inicial antes de conversar com RH ou sindicato.
   </p>
 
-  <h2 id="domingos" class="font-display text-2xl text-white mt-10">Domingos y feriados en la 6x1</h2>
+  <h2 id="domingos" class="font-display text-2xl text-white mt-10">Domingos e feriados na 6x1</h2>
   <p>
-    En algunos sectores, trabajar domingo es permitido, pero el descanso semanal remunerado debe estar
-    garantizado. Cuando no hay compensación correcta, el costo jurídico crece rápido, especialmente en períodos
-    largos sin regularización.
+    Em alguns setores, trabalhar no domingo e permitido, mas o descanso semanal remunerado deve ser garantido.
+    Quando nao existe compensacao correta, o risco juridico cresce rapidamente, principalmente por periodos longos.
   </p>
   <p>
-    Para el trabajador, el punto clave es comprobar continuidad de jornadas sin descanso adecuado. Para la
-    empresa, la prioridad es auditar escalas reales y corregir desvíos antes de que se acumulen meses de
-    diferencias.
+    Para o trabalhador, o ponto chave e comprovar continuidade de jornadas sem descanso adequado. Para a empresa,
+    a prioridade e auditar escalas reais e corrigir desvios antes de acumular meses de diferencas.
   </p>
 
-  <h2 id="documentacion" class="font-display text-2xl text-white mt-10">Cómo documentar incumplimientos</h2>
+  <h2 id="documentacao" class="font-display text-2xl text-white mt-10">Como documentar descumprimentos</h2>
   <ol class="list-decimal pl-6 space-y-2">
-    <li>Guarda escala oficial semanal o mensual.</li>
-    <li>Guarda registros de punto (entrada, salida e intervalos).</li>
-    <li>Compara horas trabajadas vs horas pagadas en nómina.</li>
-    <li>Separa por tipo: extra 50%, domingo, feriado y nocturno.</li>
-    <li>Registra fechas y turnos sin descanso regular.</li>
+    <li>Guarde a escala oficial semanal ou mensal.</li>
+    <li>Guarde registros de ponto (entrada, saida e intervalos).</li>
+    <li>Compare horas trabalhadas com horas pagas na folha.</li>
+    <li>Separe por tipo: extra 50%, domingo, feriado e noturno.</li>
+    <li>Registre datas e turnos sem descanso regular.</li>
   </ol>
   <p>
-    Este historial permite una conversación objetiva con la empresa y evita discusiones genéricas sin números.
+    Esse historico permite conversa objetiva com a empresa e evita discussoes genericas sem numeros.
   </p>
 
-  <h2 id="acciones" class="font-display text-2xl text-white mt-10">Plan de acción práctico</h2>
+  <h2 id="acoes" class="font-display text-2xl text-white mt-10">Plano de acao pratico</h2>
   <div class="bg-ink-900/40 rounded-xl border border-ink-800/50 p-5">
     <ul class="list-disc pl-6 space-y-2">
-      <li>Paso 1: revisar contrato, convenio y política de punto.</li>
-      <li>Paso 2: consolidar 3 meses de datos para cálculo comparativo.</li>
-      <li>Paso 3: solicitar ajuste formal por escrito.</li>
-      <li>Paso 4: si no hay respuesta, escalar con sindicato o asesoría especializada.</li>
+      <li>Passo 1: revisar contrato, convencao e politica de ponto.</li>
+      <li>Passo 2: consolidar 3 meses de dados para calculo comparativo.</li>
+      <li>Passo 3: solicitar ajuste formal por escrito.</li>
+      <li>Passo 4: sem resposta, escalar com sindicato ou assessoria especializada.</li>
     </ul>
   </div>
 
   <p>
-    Si además quieres entender cómo el debate político puede cambiar este escenario, sigue con
-    <a href="/fin-escala-6x1-reforma-laboral/" class="text-brand-400 hover:text-brand-300">nuestro análisis de reforma laboral y fin de la 6x1</a>.
+    Se voce tambem quer entender como o debate politico pode mudar esse cenario, continue com
+    <a href="/fin-escala-6x1-reforma-laboral/" class="text-brand-400 hover:text-brand-300">nossa analise de reforma trabalhista e fim da 6x1</a>.
   </p>
 </ArticlePageLayout>
