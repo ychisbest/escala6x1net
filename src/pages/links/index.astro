@@ -1,0 +1,38 @@
+---
+import ContentPageLayout from "../../layouts/ContentPageLayout.astro";
+import partnerLinks from "../../../links.json";
+
+type PartnerLink = {
+  html: string;
+};
+
+const links = partnerLinks as PartnerLink[];
+---
+
+<ContentPageLayout
+  title="Links parceiros - Escala6x1.net"
+  heading="Links parceiros"
+  description="Colecao de links parceiros publicados no Escala6x1.net."
+  canonicalPath="/links/"
+>
+  <p>
+    Esta pagina reune os links parceiros exibidos pelo Escala6x1.net. Apenas os
+    links reservados a este projeto aparecem aqui.
+  </p>
+
+  <div class="grid gap-4 not-prose">
+    {
+      links.map((link, index) => (
+        <article class="rounded-2xl border border-ink-800/50 bg-ink-950/50 p-5">
+          <p class="mb-3 text-xs uppercase tracking-[0.18em] text-ink-500">
+            Link {index + 1}
+          </p>
+          <div
+            class="text-base leading-8 text-ink-200 [&_a]:font-semibold [&_a]:text-brand-400 [&_a]:underline-offset-4 [&_a]:hover:underline"
+            set:html={link.html}
+          />
+        </article>
+      ))
+    }
+  </div>
+</ContentPageLayout>
