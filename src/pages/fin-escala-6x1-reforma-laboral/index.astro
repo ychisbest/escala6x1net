@@ -2,40 +2,131 @@
 import ArticlePageLayout from '../../layouts/ArticlePageLayout.astro';
 
 const toc = [
-  { id: 'estado-atual', label: 'Estado atual do debate' },
-  { id: 'cenarios', label: 'Cenarios para 2026-2027' },
+  { id: 'resumo', label: 'Resumo rapido' },
+  { id: 'foi-aprovado', label: 'Foi aprovado?' },
+  { id: 'pec-votacao', label: 'PEC e votacao' },
+  { id: 'senado-camara', label: 'Senado e Camara' },
+  { id: 'quando-vale', label: 'Quando comeca a valer?' },
+  { id: 'andamento', label: 'Andamento atual' },
+  { id: 'cenarios', label: 'Cenarios de transicao' },
   { id: 'impacto-trabalhador', label: 'Impacto para trabalhadores' },
   { id: 'impacto-empresa', label: 'Impacto para empresas' },
-  { id: 'preparacao', label: 'Como se preparar desde agora' },
-  { id: 'acompanhamento', label: 'Onde acompanhar a tramitacao' },
+  { id: 'preparacao', label: 'Como se preparar' },
+  { id: 'faq-fim', label: 'FAQ do fim da 6x1' },
+  { id: 'acompanhamento', label: 'Onde acompanhar' },
+];
+
+const faqItems = [
+  {
+    question: 'O fim da escala 6x1 ja foi aprovado?',
+    answer:
+      'Nao trate como definitivo sem checar a tramitacao completa. Pode haver etapas parciais (comissao etc.) sem vigencia nacional.',
+  },
+  {
+    question: 'Precisa passar pelo Senado?',
+    answer:
+      'Em mudancas constitucionais, o tramite tipicamente envolve as duas Casas. Veja a situacao da materia oficial.',
+  },
+  {
+    question: 'Quando a mudanca comeca a valer?',
+    answer:
+      'So apos o rito completo e conforme a vigencia do texto final (pode haver transicao). Ate la, a 6x1 segue no marco atual.',
+  },
+  {
+    question: 'Escala 6x1 acabou ou ainda existe?',
+    answer:
+      'Ate confirmacao de vigencia nacional, o modelo continua podendo existir dentro dos limites legais.',
+  },
 ];
 ---
 
 <ArticlePageLayout
-  title="Fim da Escala 6x1: Reforma Trabalhista e Cenarios 2026 | Escala6x1.net"
-  heading="Fim da Escala 6x1: O que pode mudar com a Reforma Trabalhista"
-  description="Analise pratica do debate sobre eliminacao da escala 6x1, com cenarios de transicao e impactos para trabalhadores, pequenas empresas e grandes operacoes."
+  title="Fim da Escala 6x1: PEC, Votacao e Quando Comeca a Valer | Escala6x1.net"
+  heading="Fim da Escala 6x1: PEC, Votacao e Quando Pode Comecar a Valer"
+  description="Fim da escala 6x1: o que e a PEC, como esta a votacao, o que falta no Senado/Camara e quando a mudanca poderia comecar a valer. Respostas claras, sem manchete falsa."
   canonicalPath="/fin-escala-6x1-reforma-laboral/"
   readTime="12 min"
   toc={toc}
+  faqItems={faqItems}
 >
   <p>
-    O debate sobre o fim da escala 6x1 nao e apenas politico. E um tema operacional que pode alterar contratos,
-    custos trabalhistas, planejamento de turnos e indicadores de produtividade.
+    Esta pagina responde as buscas mais comuns sobre o <strong>fim da escala 6x1</strong>:
+    se <strong>foi aprovado</strong>, o que e a <strong>PEC</strong>, como esta a
+    <strong>votacao</strong>, o papel do <strong>Senado</strong> e da Camara, e
+    <strong>quando comeca a valer</strong> se a mudanca for concluida.
+    Atualize a data de verificacao abaixo sempre que o status legislativo mudar.
+  </p>
+  <p class="text-sm text-ink-400">
+    Ultima verificacao editorial: <strong>16 de outubro de 2026</strong>.
+    Conteudo educativo; nao substitui assessoria juridica nem o texto oficial da tramitacao.
   </p>
 
-  <h2 id="estado-atual" class="font-display text-2xl text-white mt-10">Estado atual do debate</h2>
+  <h2 id="resumo" class="font-display text-2xl text-white mt-10">Resumo rapido</h2>
+  <ul class="list-disc pl-6 space-y-2">
+    <li>O debate sobre o <strong>fim da escala 6x1</strong> segue ativo (PEC / propostas de reducao de jornada).</li>
+    <li>Ate a ultima verificacao editorial, <strong>nao ha abolicao definitiva</strong> concluida em todas as etapas constitucionais.</li>
+    <li>Enquanto isso, a jornada 6x1 continua podendo ser usada dentro dos limites da Constituicao e da CLT.</li>
+    <li>Para definicao e funcionamento do regime, use o <a href="/guia-escala-6x1/" class="text-brand-400 hover:text-brand-300">guia da escala 6x1</a>.</li>
+  </ul>
+
+  <h2 id="foi-aprovado" class="font-display text-2xl text-white mt-10">Fim da escala 6x1: foi aprovado?</h2>
   <p>
-    Em 28 de fevereiro de 2026, ainda nao existe aprovacao constitucional final para eliminar a 6x1 em todo o
-    Brasil. Ha propostas em tramitacao e avancos parciais em comissoes, mas a mudanca estrutural depende de quorum
-    qualificado e votacoes em etapas sucessivas.
+    <strong>Resposta curta:</strong> depende do que se chama de “aprovado”. Pode haver
+    avancos em comissao ou etapa parcial sem significar vigencia nacional imediata.
+    So considere “aprovado de forma definitiva” se houver conclusao das etapas
+    constitucionais necessarias e publicacao/promulgacao do texto final.
   </p>
   <p>
-    Isso significa que o regime atual segue valendo, mas o risco regulatorio ja existe. Empresas sem simulacao de
-    transicao podem reagir tarde. Trabalhadores sem historico de jornada perdem forca de negociacao.
+    Se a manchete falar so em “aprovado na CCJ” ou “aprovado em comissao”, isso
+    <strong>ainda nao e o mesmo</strong> que a regra ja valendo para todos os contratos.
+    Confira o andamento oficial (links no fim desta pagina) e o
+    <a href="/blog/andamento-votacao-fim-escala-6x1/" class="text-brand-400 hover:text-brand-300">rastreio de votacao</a>.
   </p>
 
-  <h2 id="cenarios" class="font-display text-2xl text-white mt-10">Cenarios para 2026-2027</h2>
+  <h2 id="pec-votacao" class="font-display text-2xl text-white mt-10">O que e a PEC e como funciona a votacao</h2>
+  <p>
+    Uma <strong>PEC</strong> (Proposta de Emenda a Constituicao) e o caminho tipico para
+    alterar regras estruturais de jornada previstas no texto constitucional. Em geral,
+    envolve discussao em comissoes e votacoes em plenarios, com quorum qualificado.
+  </p>
+  <p>
+    Na pratica: acompanhe (1) o numero/identificacao da proposta, (2) a fase atual
+    (comissao / plenario / revisao na outra Casa), (3) se houve texto substitutivo.
+    Evite confundir “entrada em pauta” com “ja vale”.
+  </p>
+
+  <h2 id="senado-camara" class="font-display text-2xl text-white mt-10">Senado e Camara: o que ainda falta?</h2>
+  <p>
+    Mudancas constitucionais costumam exigir passagem pelas duas Casas do Congresso,
+    com ritos proprios. Um avancos em uma Casa <strong>nao encerra</strong> automaticamente
+    o processo na outra. Use fontes oficiais do
+    <a class="text-brand-400 hover:text-brand-300" href="https://www25.senado.leg.br/web/atividade/materias" target="_blank" rel="noopener noreferrer">Senado</a>
+    e da
+    <a class="text-brand-400 hover:text-brand-300" href="https://www.camara.leg.br/" target="_blank" rel="noopener noreferrer">Camara</a>
+    para ver a fase atual — nao apenas posts virais.
+  </p>
+
+  <h2 id="quando-vale" class="font-display text-2xl text-white mt-10">Quando comeca a valer?</h2>
+  <p>
+    <strong>Resposta cuidadosa:</strong> so depois que o texto final concluir o rito
+    necessario e houver vigencia conforme o proprio texto (pode haver vacacio legis /
+    transicao gradual). Ate la, planejar cenarios e nao assumir data de redes sociais.
+  </p>
+  <p>
+    Se a proposta prever reducao gradual (ex.: etapas ate 40h ou 36h), o “quando vale”
+    pode ser diferente por setor e por calendario de transicao — leia o texto consolidado,
+    nao so o titulo da noticia.
+  </p>
+
+  <h2 id="andamento" class="font-display text-2xl text-white mt-10">Andamento atual (como ler sem cair em fake)</h2>
+  <ol class="list-decimal pl-6 space-y-2">
+    <li>Abra a materia oficial (Senado/Camara) e anote a situacao da tramitacao.</li>
+    <li>Separe: comissao ≠ plenario ≠ promulgacao.</li>
+    <li>Compare duas fontes oficiais antes de compartilhar “ja acabou a 6x1”.</li>
+    <li>Volte ao <a href="/blog/andamento-votacao-fim-escala-6x1/" class="text-brand-400 hover:text-brand-300">post de andamento</a> para a nota de “ultima atualizacao”.</li>
+  </ol>
+
+  <h2 id="cenarios" class="font-display text-2xl text-white mt-10">Cenarios de transicao</h2>
   <div class="overflow-x-auto rounded-xl border border-ink-700/50">
     <table class="w-full text-sm">
       <thead>
@@ -96,11 +187,61 @@ const toc = [
     <li>Atualizar politicas internas de jornada e registro.</li>
   </ol>
   <p>
-    Se voce precisa de base legal e operacional para esse trabalho, use o
-    <a href="/guia-escala-6x1/" class="text-brand-400 hover:text-brand-300">guia completo da escala 6x1</a>
-    e o conteudo de
-    <a href="/derechos-laborales-escala-6x1/" class="text-brand-400 hover:text-brand-300">direitos trabalhistas</a>.
+    Base operacional:
+    <a href="/guia-escala-6x1/" class="text-brand-400 hover:text-brand-300">guia completo da escala 6x1</a>,
+    <a href="/faq-escala-6x1/" class="text-brand-400 hover:text-brand-300">FAQ</a>,
+    <a href="/calculadora-horas-extras-6x1/" class="text-brand-400 hover:text-brand-300">calculadora de horas extras</a>
+    e o
+    <a href="/blog/andamento-votacao-fim-escala-6x1/" class="text-brand-400 hover:text-brand-300">rastreio de votacao</a>.
   </p>
+
+  <h2 id="faq-fim" class="font-display text-2xl text-white mt-10">FAQ do fim da escala 6x1</h2>
+  <div class="space-y-3">
+    <details class="group bg-ink-900/50 border border-ink-700/50 rounded-xl overflow-hidden">
+      <summary class="flex items-center justify-between p-5 cursor-pointer list-none">
+        <h3 class="text-white font-medium pr-4">O fim da escala 6x1 ja foi aprovado?</h3>
+        <svg class="w-5 h-5 text-ink-400 group-open:rotate-180 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      </summary>
+      <div class="px-5 pb-5 text-ink-300 leading-relaxed">
+        Nao trate como definitivo sem checar a tramitacao completa. Pode haver etapas parciais
+        (comissao etc.) sem vigencia nacional. Detalhes acima em “Foi aprovado?” e no
+        <a href="/faq-escala-6x1/" class="text-brand-400 hover:text-brand-300">FAQ geral</a>.
+      </div>
+    </details>
+    <details class="group bg-ink-900/50 border border-ink-700/50 rounded-xl overflow-hidden">
+      <summary class="flex items-center justify-between p-5 cursor-pointer list-none">
+        <h3 class="text-white font-medium pr-4">Precisa passar pelo Senado?</h3>
+        <svg class="w-5 h-5 text-ink-400 group-open:rotate-180 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      </summary>
+      <div class="px-5 pb-5 text-ink-300 leading-relaxed">
+        Em mudancas constitucionais, o trâmite tipicamente envolve as duas Casas. Veja a
+        situacao da materia oficial — nao assuma que um voto encerra tudo.
+      </div>
+    </details>
+    <details class="group bg-ink-900/50 border border-ink-700/50 rounded-xl overflow-hidden">
+      <summary class="flex items-center justify-between p-5 cursor-pointer list-none">
+        <h3 class="text-white font-medium pr-4">Quando a mudanca comeca a valer?</h3>
+        <svg class="w-5 h-5 text-ink-400 group-open:rotate-180 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      </summary>
+      <div class="px-5 pb-5 text-ink-300 leading-relaxed">
+        So apos o rito completo e conforme a vigencia do texto final (pode haver transicao).
+        Ate la, a 6x1 segue no marco atual. Use a
+        <a href="/calculadora-horas-extras-6x1/" class="text-brand-400 hover:text-brand-300">calculadora de horas extras</a>
+        para o regime vigente.
+      </div>
+    </details>
+    <details class="group bg-ink-900/50 border border-ink-700/50 rounded-xl overflow-hidden">
+      <summary class="flex items-center justify-between p-5 cursor-pointer list-none">
+        <h3 class="text-white font-medium pr-4">Escala 6x1 acabou ou ainda existe?</h3>
+        <svg class="w-5 h-5 text-ink-400 group-open:rotate-180 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      </summary>
+      <div class="px-5 pb-5 text-ink-300 leading-relaxed">
+        Ate confirmacao de vigencia nacional, o modelo continua podendo existir dentro dos
+        limites legais. Entenda o regime no
+        <a href="/guia-escala-6x1/" class="text-brand-400 hover:text-brand-300">guia completo</a>.
+      </div>
+    </details>
+  </div>
 
   <h2 id="acompanhamento" class="font-display text-2xl text-white mt-10">Onde acompanhar a tramitacao oficial</h2>
   <ul class="list-disc pl-6 space-y-2">
@@ -115,6 +256,10 @@ const toc = [
     <li>
       Portal Planalto:
       <a class="text-brand-400 hover:text-brand-300" href="https://www.planalto.gov.br/" target="_blank" rel="noopener noreferrer">texto constitucional e normas vigentes</a>
+    </li>
+    <li>
+      Nota editorial de andamento:
+      <a href="/blog/andamento-votacao-fim-escala-6x1/" class="text-brand-400 hover:text-brand-300">andamento da votacao</a>
     </li>
   </ul>
 

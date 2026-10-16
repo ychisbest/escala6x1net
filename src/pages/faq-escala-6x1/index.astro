@@ -3,33 +3,54 @@ import ArticlePageLayout from '../../layouts/ArticlePageLayout.astro';
 
 const faqItems = [
   {
-    question: 'A escala 6x1 ja foi encerrada no Brasil?',
+    question: 'O fim da escala 6x1 ja foi aprovado?',
     answer:
-      'Nao. Ate 28 de fevereiro de 2026 nao existe abolicao definitiva aprovada em todas as etapas legislativas.',
+      'Nao trate como vigencia definitiva sem checar a tramitacao completa. Pode haver etapas parciais sem a regra ja valer. Detalhes: /fin-escala-6x1-reforma-laboral/.',
+  },
+  {
+    question: 'A proposta precisa passar pelo Senado?',
+    answer:
+      'Mudancas constitucionais costumam envolver as duas Casas. Um avancos em comissao ou em uma Casa nao encerra o processo sozinho. Veja /fin-escala-6x1-reforma-laboral/#senado-camara.',
+  },
+  {
+    question: 'O que e a PEC da escala 6x1 / jornada?',
+    answer:
+      'PEC e Proposta de Emenda a Constituicao — caminho tipico para alterar regras estruturais de jornada. Explicacao e cuidados: /fin-escala-6x1-reforma-laboral/#pec-votacao.',
+  },
+  {
+    question: 'Quando o fim da escala 6x1 comeca a valer?',
+    answer:
+      'So apos o rito completo e conforme a vigencia do texto final (pode haver transicao). Ate la, vale o marco atual. /fin-escala-6x1-reforma-laboral/#quando-vale',
+  },
+  {
+    question: 'O que e a escala 6x1 e como funciona a jornada?',
+    answer:
+      'Seis dias de trabalho e um de descanso, em geral dentro do limite semanal legal. Guia completo: /guia-escala-6x1/.',
+  },
+  {
+    question: 'Qual a diferenca entre escala 6x1 e escala 5x2?',
+    answer:
+      '6x1 = 6 dias trabalho / 1 descanso; 5x2 = 5 / 2 (comum em escritorios). Comparativo: /guia-escala-6x1/#alternativas.',
   },
   {
     question: 'Qual e o limite semanal mais comum na 6x1?',
-    answer: 'A referencia geral e 44 horas semanais, observando regras constitucionais e da CLT.',
+    answer:
+      'A referencia geral e 44 horas semanais, observando Constituicao, CLT e acordos da categoria. /guia-escala-6x1/#marco-legal',
   },
   {
-    question: 'E possivel trabalhar aos domingos nesse modelo?',
+    question: 'Como calcular horas extras na escala 6x1?',
     answer:
-      'Sim, em atividades autorizadas, desde que haja descanso semanal remunerado e compensacoes legais.',
+      'Use a calculadora com adicional de 50% (comum) e 100% (domingo/feriado, conforme o caso): /calculadora-horas-extras-6x1/.',
   },
   {
-    question: 'Como saber se tenho horas extras pendentes?',
+    question: 'E possivel trabalhar aos domingos na 6x1?',
     answer:
-      'Compare o registro real de ponto com a folha de pagamento e aplique os adicionais de 50% e 100%.',
+      'Em atividades autorizadas, com DSR e compensacoes legais quando aplicavel. Contexto: /guia-escala-6x1/ e /derechos-laborales-escala-6x1/.',
   },
   {
-    question: 'O que fazer se a empresa nao respeita o descanso?',
+    question: 'Onde acompanhar o andamento da votacao?',
     answer:
-      'Documente datas e turnos, solicite regularizacao por escrito e, se necessario, busque apoio sindical ou juridico.',
-  },
-  {
-    question: 'Reducao de jornada significa reduzir salario?',
-    answer:
-      'As propostas publicas costumam discutir reducao de horas sem reducao salarial, mas o texto final depende da tramitacao legislativa.',
+      'Fontes oficiais (Senado/Camara) + nosso rastreio editorial: /blog/andamento-votacao-fim-escala-6x1/ (sempre linka de volta a /fin-escala-6x1-reforma-laboral/).',
   },
 ];
 
@@ -41,9 +62,9 @@ const toc = [
 ---
 
 <ArticlePageLayout
-  title="FAQ da Escala 6x1: Respostas Claras | Escala6x1.net"
-  heading="FAQ da Escala 6x1"
-  description="Respostas diretas sobre jornada 6x1, direitos trabalhistas, horas extras, domingos, descanso e debate legislativo no Brasil."
+  title="FAQ Escala 6x1: Foi Aprovado, Senado, PEC e Horas Extras"
+  heading="FAQ da Escala 6x1: Respostas Rapidas"
+  description="FAQ da escala 6x1: foi aprovado o fim? Senado e PEC? Como funciona a jornada? Horas extras? Respostas curtas com links para o guia e a pagina do fim da 6x1."
   canonicalPath="/faq-escala-6x1/"
   readTime="9 min"
   toc={toc}
@@ -81,9 +102,9 @@ const toc = [
   <h2 id="proximos-passos" class="font-display text-2xl text-white mt-10">Proximos passos recomendados</h2>
   <p>Se voce esta comecando no tema, siga esta ordem:</p>
   <ol class="list-decimal pl-6 space-y-2">
-    <li><a href="/guia-escala-6x1/" class="text-brand-400 hover:text-brand-300">Guia completo da escala 6x1</a></li>
-    <li><a href="/derechos-laborales-escala-6x1/" class="text-brand-400 hover:text-brand-300">Direitos trabalhistas do trabalhador</a></li>
+    <li><a href="/fin-escala-6x1-reforma-laboral/" class="text-brand-400 hover:text-brand-300">Fim da escala 6x1 — PEC, votacao e quando vale</a></li>
+    <li><a href="/guia-escala-6x1/" class="text-brand-400 hover:text-brand-300">Guia: o que e e como funciona</a></li>
     <li><a href="/calculadora-horas-extras-6x1/" class="text-brand-400 hover:text-brand-300">Calculadora de horas extras</a></li>
-    <li><a href="/fin-escala-6x1-reforma-laboral/" class="text-brand-400 hover:text-brand-300">Cenarios de reforma e transicao</a></li>
+    <li><a href="/blog/andamento-votacao-fim-escala-6x1/" class="text-brand-400 hover:text-brand-300">Andamento da votacao (blog)</a></li>
   </ol>
 </ArticlePageLayout>

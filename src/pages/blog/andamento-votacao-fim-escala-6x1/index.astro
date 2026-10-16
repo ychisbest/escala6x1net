@@ -1,0 +1,82 @@
+---
+import ArticlePageLayout from '../../../layouts/ArticlePageLayout.astro';
+
+const toc = [
+  { id: 'atualizacao', label: 'Ultima atualizacao' },
+  { id: 'como-ler', label: 'Como ler o andamento' },
+  { id: 'checklist', label: 'Checklist rapido' },
+  { id: 'proxima', label: 'O que observar a seguir' },
+];
+---
+
+<ArticlePageLayout
+  title="Andamento da Votacao: Fim da Escala 6x1 e PEC | Atualizado"
+  heading="Andamento da Votacao do Fim da Escala 6x1"
+  description="Acompanhe o andamento da votacao e da PEC relacionadas ao fim da escala 6x1. Nota editorial com data de atualizacao — detalhes e FAQ na pagina principal."
+  canonicalPath="/blog/andamento-votacao-fim-escala-6x1/"
+  readTime="6 min"
+  updatedAt="16 de outubro de 2026"
+  publishedAt="16 de outubro de 2026"
+  toc={toc}
+>
+  <p class="text-sm text-ink-400">
+    <strong>Ultima atualizacao editorial:</strong> 16 de outubro de 2026.
+    Ops: altere esta data (e o paragrafo de status) sempre que a tramitacao mudar.
+  </p>
+
+  <p>
+    Esta e uma nota curta de acompanhamento sobre o <strong>andamento da votacao</strong>
+    e da <strong>PEC</strong> no debate do <strong>fim da escala 6x1</strong>.
+    A analise completa (foi aprovado?, Senado, quando comeca a valer, cenarios) fica na
+    pagina principal:
+    <a href="/fin-escala-6x1-reforma-laboral/" class="text-brand-400 hover:text-brand-300">Fim da Escala 6x1 — PEC, votacao e quando vale</a>.
+  </p>
+
+  <h2 id="atualizacao" class="font-display text-2xl text-white mt-10">Status resumido (editavel)</h2>
+  <div class="bg-ink-900/40 rounded-xl border border-ink-800/50 p-5">
+    <ul class="list-disc pl-6 space-y-2">
+      <li><strong>Tema:</strong> propostas / PEC ligadas a reducao de jornada e ao fim do modelo 6x1.</li>
+      <li><strong>Leitura prudente:</strong> avancos em comissao ou pauta <em>nao</em> significam, sozinhos, vigencia nacional.</li>
+      <li><strong>Regime atual:</strong> ate confirmacao de vigencia do texto final, a escala 6x1 continua podendo existir nos limites legais vigentes.</li>
+      <li><strong>Acao:</strong> conferir materia oficial no Senado e na Camara (links na pagina principal).</li>
+    </ul>
+    <p class="text-sm text-ink-400 mt-4">
+      Status editorial (16/10/2026): acompanhamento em tramitacao — sem mudanca de vigencia confirmada nesta verificacao.
+    </p>
+  </div>
+
+  <h2 id="como-ler" class="font-display text-2xl text-white mt-10">Como ler o andamento sem cair em manchete falsa</h2>
+  <ol class="list-decimal pl-6 space-y-2">
+    <li>Separe <strong>comissao</strong>, <strong>plenario</strong> e <strong>promulgacao/vigencia</strong>.</li>
+    <li>Confirme o identificador da proposta (PEC/projeto) na fonte oficial.</li>
+    <li>Ignore títulos com nome de politico como unica prova de status — o que importa e a fase legislativa.</li>
+    <li>Volte sempre ao hub explicativo:
+      <a href="/fin-escala-6x1-reforma-laboral/" class="text-brand-400 hover:text-brand-300">/fin-escala-6x1-reforma-laboral/</a>.
+    </li>
+  </ol>
+
+  <h2 id="checklist" class="font-display text-2xl text-white mt-10">Checklist rapido</h2>
+  <ul class="list-disc pl-6 space-y-2">
+    <li>Foi aprovado de forma definitiva? → ver FAQ na pagina do fim da 6x1.</li>
+    <li>Senado / Camara: o que falta? → secao Senado e Camara na mesma pagina.</li>
+    <li>Quando comeca a valer? → secao “Quando comeca a valer?”.</li>
+    <li>O que e a jornada hoje? → <a href="/guia-escala-6x1/" class="text-brand-400 hover:text-brand-300">guia da escala 6x1</a>.</li>
+  </ul>
+
+  <h2 id="proxima" class="font-display text-2xl text-white mt-10">O que observar a seguir</h2>
+  <p>
+    Datas de pauta, pareceres de comissao, texto substitutivo e eventual calendario de
+    transicao (se o texto prever fases). Qualquer mudanca material deve atualizar:
+  </p>
+  <ol class="list-decimal pl-6 space-y-2">
+    <li>A data “Ultima atualizacao” deste post.</li>
+    <li>O bloco de status acima.</li>
+    <li>As secoes correspondentes em
+      <a href="/fin-escala-6x1-reforma-laboral/" class="text-brand-400 hover:text-brand-300">/fin-escala-6x1-reforma-laboral/</a>.
+    </li>
+  </ol>
+
+  <p class="text-sm text-ink-400 mt-8">
+    Conteudo informativo. Nao substitui o texto oficial nem assessoria juridica.
+  </p>
+</ArticlePageLayout>

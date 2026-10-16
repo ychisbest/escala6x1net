@@ -29,15 +29,15 @@ const faqItems = [
   {
     question: 'O fim da escala 6x1 ja foi aprovado?',
     answer:
-      'Ainda nao. Existem propostas legislativas em tramitacao e o debate segue ativo em 2026.',
+      'Ainda nao trate como vigencia definitiva. Ha propostas/PEC em tramitacao — veja o detalhe em /fin-escala-6x1-reforma-laboral/.',
   },
 ];
 ---
 
 <ArticlePageLayout
-  title="Guia Completo da Escala 6x1 em 2026 | Escala6x1.net"
-  heading="Guia Completo da Escala 6x1 no Brasil"
-  description="Guia pilar para entender a jornada 6x1: definicao, calculo de horas, direitos trabalhistas, riscos, reformas e acoes praticas para trabalhadores e empresas."
+  title="O Que E Escala 6x1 e Como Funciona a Jornada | Guia 2026"
+  heading="O Que E a Escala 6x1 e Como Funciona a Jornada"
+  description="O que e a escala 6x1, como funciona a jornada na pratica, limites de horas, comparativo com escala 5x2 e links para fim da 6x1, FAQ e calculadora."
   canonicalPath="/guia-escala-6x1/"
   readTime="14 min"
   toc={toc}
@@ -51,7 +51,7 @@ const faqItems = [
 
   <h2 id="definicao" class="font-display text-2xl text-white mt-10">O que e a escala 6x1</h2>
   <p>
-    A escala 6x1 e um regime de organizacao do trabalho em que a pessoa trabalha seis dias consecutivos e descansa
+    Em resumo, <strong>o que e a escala 6x1</strong>: um regime de organizacao do trabalho em que a pessoa trabalha seis dias consecutivos e descansa
     um. No desenho mais comum, a carga fica dentro do limite de 44 horas semanais, com turnos diarios que podem
     variar por setor, convencao coletiva e necessidade operacional.
   </p>
@@ -98,6 +98,9 @@ const faqItems = [
       </tbody>
     </table>
   </div>
+  <p class="mt-4">
+    Quer so a resposta rapida? Veja tambem o <a href="/faq-escala-6x1/" class="text-brand-400 hover:text-brand-300">FAQ</a>. Para horas extras na 6x1, use a <a href="/calculadora-horas-extras-6x1/" class="text-brand-400 hover:text-brand-300">calculadora</a>.
+  </p>
 
   <h2 id="marco-legal" class="font-display text-2xl text-white mt-10">Marco legal no Brasil</h2>
   <p>
@@ -125,14 +128,47 @@ const faqItems = [
     para estimar diferencas de pagamento.
   </p>
 
-  <h2 id="alternativas" class="font-display text-2xl text-white mt-10">6x1 vs 5x2 vs 4x3</h2>
+  <h2 id="alternativas" class="font-display text-2xl text-white mt-10">Escala 6x1 vs escala 5x2 (e 4x3)</h2>
   <p>
-    O debate publico envolve produtividade, saude mental, retencao de talentos e custo de transicao. A 5x2 ja e
-    padrao em escritorios; a 4x3 aparece em pilotos internacionais e propostas legislativas. Para empresas, a mudanca
-    nao e apenas "menos horas": exige redesenho de processos, cobertura de turnos e metas por hora produtiva.
+    Muita gente busca <strong>escala 5x2</strong> no mesmo contexto da 6x1. Em resumo:
+    a <strong>6x1</strong> organiza seis dias de trabalho e um de descanso; a
+    <strong>5x2</strong> e o padrao de cinco dias com dois de descanso (comum em escritorios).
+    A <strong>4x3</strong> aparece em propostas e pilotos de jornada menor.
   </p>
-  <div class="bg-ink-900/40 rounded-xl border border-ink-800/50 p-5">
-    <h3 class="text-white font-semibold mb-2">Checklist rapido de transicao</h3>
+  <div class="overflow-x-auto rounded-xl border border-ink-700/50 mt-6">
+    <table class="w-full text-sm">
+      <thead>
+        <tr class="bg-ink-800/80">
+          <th class="text-left px-4 py-3 text-white">Modelo</th>
+          <th class="text-left px-4 py-3 text-white">Trabalho x descanso</th>
+          <th class="text-left px-4 py-3 text-white">Carga semanal tipica</th>
+          <th class="text-left px-4 py-3 text-white">Onde aparece</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="border-t border-ink-800/50">
+          <td class="px-4 py-3">6x1</td>
+          <td class="px-4 py-3">6 x 1</td>
+          <td class="px-4 py-3">Ate ~44h (limites legais)</td>
+          <td class="px-4 py-3">Comercio, servicos, operacao continua</td>
+        </tr>
+        <tr class="border-t border-ink-800/50">
+          <td class="px-4 py-3">5x2</td>
+          <td class="px-4 py-3">5 x 2</td>
+          <td class="px-4 py-3">~40h em muitos acordos</td>
+          <td class="px-4 py-3">Escritorios e rotinas administrativas</td>
+        </tr>
+        <tr class="border-t border-ink-800/50">
+          <td class="px-4 py-3">4x3</td>
+          <td class="px-4 py-3">4 x 3</td>
+          <td class="px-4 py-3">Meta frequente em propostas (~36h)</td>
+          <td class="px-4 py-3">Debate de reforma / pilotos</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="bg-ink-900/40 rounded-xl border border-ink-800/50 p-5 mt-6">
+    <h3 class="text-white font-semibold mb-2">Checklist rapido de transicao (empresa)</h3>
     <ul class="list-disc pl-6 space-y-2 text-sm">
       <li>Mapear horas extras recorrentes por equipe.</li>
       <li>Recalcular dimensionamento minimo por turno.</li>
@@ -140,6 +176,11 @@ const faqItems = [
       <li>Negociar regra de transicao em convencao aplicavel.</li>
     </ul>
   </div>
+  <p class="mt-4">
+    Sobre o debate legislativo do <strong>fim da escala 6x1</strong> (PEC, votacao, quando vale),
+    va para a pagina dedicada:
+    <a href="/fin-escala-6x1-reforma-laboral/" class="text-brand-400 hover:text-brand-300">fim da escala 6x1 — reforma e cenarios</a>.
+  </p>
 
   <h2 id="o-que-fazer" class="font-display text-2xl text-white mt-10">O que fazer em caso de descumprimento</h2>
   <ol class="list-decimal pl-6 space-y-2">
